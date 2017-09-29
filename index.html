@@ -13,7 +13,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Guida a Soap UI</h1>
-      <h2 class="project-tagline">Guida alla creazione di una request e alla generazione di un semplice test di carico</h2>
+      <h2 class="project-tagline">Guida alla creazione di una chiamata e alla generazione di un test di carico</h2>
         <a href="{{ site.github.repository_url }}" class="btn">View code on GitHub</a>
      
         <a href="{{ site.github.zip_url }}" class="btn">Download XML</a>
@@ -35,7 +35,13 @@ ascolto in locale sulla porta 8080)</p>
 <p>A questo punto viene prodotta una gerarchia di partenza. Cliccando con il tasto destro a ciascun livello, è possibile rinominare ogni singolo componente
 in modo che sia più significativo </p>  
 <img src="images/restTree.jpg" class="imgCenter"> 
- 
+ <p>Analizziamo ogni livello in dettaglio: 
+ <li><strong>Nome del Progetto</strong></li>
+ <li><strong>Service</strong> : L’indirizzo è lo stesso che abbiamo indicato in fase di creazione del progetto e verrà utilizzato come End Point di Defaul.t</li>
+ <li><strong>Resource</strong> : Nome della risorsa e path per arrivare al servizio. Nel nostro caso <em>Functions</em> è il nome della classe che espone il servizio. Per poter
+indicare il path, basta selezionare la risorsa e modificare il valore nel box sottostante:<img src="images/boxPath.jpg" class="imgCenter"> </li></p>  
+<li><strong>Method</strong> : Identificativo del metodo utilizzato. Suggerisco di utilizzare lo stesso nome del servizio esposto sul Web Server.</li>
+<li><strong>Request</strong> : La chiamata al Web Server.</li>
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
