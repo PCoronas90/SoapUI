@@ -4,3 +4,12 @@
     margin: auto;
 }
 p {text-align: justify;}
+.centerPosition{
+	text-align: center;
+}
+
+.lineDivider{
+	align=center;
+	color=grey;
+	
+}
