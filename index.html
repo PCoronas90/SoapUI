@@ -58,6 +58,22 @@ indicare il path, basta selezionare la risorsa e modificare il valore nel box so
 	
   <hr class="lineDivider"></hr> 
   <h1>Configurazione del test di carico</h1>
+  <p>Il cosiddetto test di carico (Load Test) in soapUI è in realtà un test di prestazione. Per configurare un Test di carico in SoapUI per prima cosa aggiungiamo un TestCase alla request</p>
+     <img src="images/testCase.jpg" class="imgCenter">
+<p>Una volta creato, con il tasto destro selezioniamo un nuovo load Test</p>
+     <img src="images/newLoadTest.jpg" class="imgCenter">
+<p>A questo punto abbiamo creato il test di caricamento. La schermata permette varie configurazioni e permette di leggere in tempo reale l'andamento del test.</p>
+     <img src="images/loadTestScreen.jpg" class="imgCenter">
+<p>La toolbar superiore permette la configurazione del test tramite alcuni parametri:
+<li><strong>Threads</strong>	Indica il numero di Thread utilizzati nel test. </li>
+<li><strong>Strategy</strong>	Selezionare la strategia di carico:<ul>
+              <li><strong><em>Burst</em></strong>	Esecuzione in  "bursts"</li>
+              <li><strong><em>Simple</em></strong>	Esecuzione con un ritardo configurabile</li>
+              <li><strong><em>Variance</em></strong>	Esecizione con numero variabile di threads</li>
+              <li><strong><em>Thread</em></strong>	Esecuzione con numero prefissato di Threads</li></ul></li>
+<li><strong>Delay</strong>	Tempo in millisecond tra ogni richiesta.</li>
+<li><strong>Random</strong>	Il fattore causale del test. Con un ritardo di 600 ms e un Random factor of 0.5, l’attuale ritardo sarà distribuito in modo uniforme tra  300 ms e 600 ms.</li>
+</p>
  <hr class="lineDivider"></hr>
       <footer class="centerPosition">
           <span class="site-footer-owner"> <p class="centerPosition">For other projects see my profile on github: <a href="https://github.com/PCoronas90?tab=repositories">Pietro Coronas</a></p></span>       
