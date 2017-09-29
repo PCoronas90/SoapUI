@@ -58,7 +58,9 @@ indicare il path, basta selezionare la risorsa e modificare il valore nel box so
 	
   <hr class="lineDivider"></hr> 
   <h1>Configurazione del test di carico</h1>
-  <p>Il cosiddetto test di carico (Load Test) in soapUI è in realtà un test di prestazione. Per configurare un Test di carico in SoapUI per prima cosa aggiungiamo un TestCase alla request</p>
+  <p>Il cosiddetto test di carico (Load Test) in soapUI è in realtà un test di prestazione. Solitamente il test viene configurato per eseguire
+  eseguire la singola chiamata (che abbiamo creato precedentemente) per un numero prefissato di volte e da un numero specifico di threads.
+  Per configurare un Test di carico in SoapUI per prima cosa aggiungiamo un TestCase alla request</p>
      <img src="images/testCase.jpg" class="imgCenter">
 <p>Una volta creato, con il tasto destro selezioniamo un nuovo load Test</p>
      <img src="images/newLoadTest.jpg" class="imgCenter">
@@ -67,12 +69,28 @@ indicare il path, basta selezionare la risorsa e modificare il valore nel box so
 <p>La toolbar superiore permette la configurazione del test tramite alcuni parametri:
 <li><strong>Threads</strong>	Indica il numero di Thread utilizzati nel test. </li>
 <li><strong>Strategy</strong>	Selezionare la strategia di carico:<ul>
-              <li><strong><em>Burst</em></strong>	Esecuzione in  "bursts"</li>
-              <li><strong><em>Simple</em></strong>	Esecuzione con un ritardo configurabile</li>
-              <li><strong><em>Variance</em></strong>	Esecizione con numero variabile di threads</li>
-              <li><strong><em>Thread</em></strong>	Esecuzione con numero prefissato di Threads</li></ul></li>
-<li><strong>Delay</strong>	Tempo in millisecond tra ogni richiesta.</li>
-<li><strong>Random</strong>	Il fattore causale del test. Con un ritardo di 600 ms e un Random factor of 0.5, l’attuale ritardo sarà distribuito in modo uniforme tra  300 ms e 600 ms.</li>
+              <li><strong><em>Burst</em></strong>: Esecuzione in  "bursts"</li>
+              <li><strong><em>Simple</em></strong>: Esecuzione con un ritardo configurabile</li>
+              <li><strong><em>Variance</em></strong>: Esecizione con numero variabile di threads</li>
+              <li><strong><em>Thread</em></strong>: Esecuzione con numero prefissato di Threads</li></ul></li>
+			  <li><strong>Delay</strong>: Tempo in millisecond tra ogni richiesta.</li>
+<li><strong>Random</strong>	Il fattore causale del test. Con un ritardo di 600 ms e un Random factor di 0.5, l’attuale ritardo sarà distribuito in modo uniforme tra  300 ms e 600 ms.</li>
+</p>
+  <hr class="lineDivider"></hr> 
+  <h1>Avvio del test di carico</h1>
+  <p>Una volta configurato, è possibile lanciare il test. SoapUI fornisce un'iterfaccia che viene aggiornata ad ogni chiamata e che indica l'andamento del test.</p>
+  <img src="images/runLoadTest.jpg" class="imgCenter">
+  <p>Ogni valore ha un significato ben preciso:
+  <li><strong>min</strong>:	Il minor tempo della singola chiamata (in millisecondi).</li>
+<li><strong>max</strong>: Il minor tempo della singola chiamata (in millisecondi).</li>
+<li><strong>avg</strong>: Il tempo medio della singola chiamata (in millisecondi).</li>
+<li><strong>last</strong>: L’ultimo tempo della singola chiamata (in millisecondi).</li>
+<li><strong>cnt</strong>: Il numero di volte che la chiamata è stata eseguita.</li>
+<li><strong>tps</strong>: Il numero di transazioni al secondo per l’ultima chiamata.</li>
+<li><strong>bytes</strong>:	Il numero di byte processati dal test.</li>
+<li><strong>bps</strong>: I bytes per secondo processati dal test.</li>
+<li><strong>err</strong>: Il numero di errori.</li>
+<li><strong>rat</strong>: Failed requests ratio (Percentuale con cui fallisce la richiesta).</li>
 </p>
  <hr class="lineDivider"></hr>
       <footer class="centerPosition">
